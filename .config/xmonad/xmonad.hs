@@ -25,7 +25,7 @@ myTerminal           = "alacritty"
 myBrowser            = "firefox"
 myEmacs              = "emacsclient -c -a 'emacs'"
 myLauncher           = "rofi -show drun"
-myColorPick          = "sh ~/dotfiles/bin/xcolor-pick.sh"
+myColorPick          = "sh ~/bin/xcolor-pick.sh"
 myWallpaperTool      = "feh --randomize --no-fehbg --bg-scale ~/images/"
 myScreenshotTool     = "flameshot gui"
 
@@ -160,8 +160,8 @@ myXmobarPP = def
     , ppExtras          = [logTitles formatFocused formatUnfocused]
     }
   where
-    formatFocused   = wrap (white    "[ ") (white    " ]") . blue    . ppWindow
-    formatUnfocused = wrap (black "[ ")    (black " ]")    . magenta . ppWindow
+    formatFocused   = wrap (white "[ ") (white " ]") . blue    . ppWindow
+    formatUnfocused = wrap (black "[ ") (black " ]") . magenta . ppWindow
 
 ppWindow = xmobarRaw . (\w -> if null w then "untitled" else w) . shorten 30
 

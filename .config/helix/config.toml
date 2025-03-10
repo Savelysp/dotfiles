@@ -1,0 +1,23 @@
+theme = "monokai_pro_transparent"
+
+[editor]
+line-number = "relative"
+scrolloff = 10
+cursorline = true
+           
+[editor.file-picker]
+hidden = false    
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "file-name", "position", "position-percentage"]
+center = ["spinner"]
+right = ["diagnostics", "file-encoding", "file-type", "version-control"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"

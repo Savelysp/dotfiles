@@ -1,0 +1,116 @@
+{
+    "height": 24,
+    "modules-left": [
+        "custom/menu", 
+        "hyprland/workspaces", 
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "group/hardware"
+    ],
+    "modules-right": [
+        "hyprland/language",
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "clock",
+        "tray",
+        "custom/powermenu"
+    ],
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "temperature",
+            "memory",
+            "cpu"
+        ]
+    },
+
+    "cpu": {
+        "format": "  {usage}%"
+    },
+
+    "memory": {
+        "format": "  {used} GiB"
+    },
+
+    "temperature": {
+        "format": "  {temperatureC}°C"
+    },
+
+	"custom/menu": {
+		"format": "{icon}",
+		"format-icons": " 󱄅",
+		"on-click": "wofi --show drun",
+		"escape": true,
+		"tooltip": false
+	},
+
+    "custom/powermenu": {
+        "format": "{icon}",
+        "format-icons": " 󰐥 ",
+		"on-click": "wofi --show drun",
+		"escape": true,
+		"tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "persistent-workspaces": {
+             "*": 9, 
+        }
+	},
+
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y}",
+        "tooltip": false,
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+    },
+
+    "network": {
+        "format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format": "d{bandwidthDownBits}, u{bandwidthUpBits}",
+        "format-disconnected": "󰖪  Disconnected", 
+        "interval": 5,
+        "max-length": 50
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} ",
+        "format-muted": "",
+        "format-icons": {
+            "headset": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 2,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    }
+}

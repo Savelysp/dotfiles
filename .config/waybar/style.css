@@ -1,0 +1,149 @@
+* {
+	font-family: JetBrainsMono, Symbols Nerd Font;
+	font-weight: bold;
+	font-size: 12px;
+    min-height: 0px;
+}
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+#custom-menu {
+    font-size: 22px;
+    padding: 0px 10px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    background: black;
+    color: #7E9CD8;
+}
+
+#custom-powermenu {
+    font-size: 22px;
+    padding: 0px 3px 0px 3px;
+    margin: 0px 0px 0px 5px;
+    background: black;
+    color: #d13d0f;
+}
+
+#window {
+    background: black;
+    color: white;
+    padding: 0px 5px 0px 5px;
+}
+
+#workspaces {
+    margin-right: 0px;
+    /* border-radius: 0px; */
+    /* transition: none; */
+    background: black;
+}
+
+#workspaces button {
+    padding: 2px;
+}
+
+#workspaces button.persistent {
+    color: white;
+}
+
+#workspaces button:hover {
+    /* transition: none; */
+    /* box-shadow: inherit; */
+    /* text-shadow: inherit; */
+    /* border-radius: inherit; */
+    color: black;
+    background: #7c818c;
+}
+
+#workspaces button.active {
+    background: white;
+    color: black;
+}
+
+#workspaces button.empty {
+    background: black;
+    color: #7c818c;
+}
+
+
+#tray {
+    background: black;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#clock {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#network {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#pulseaudio {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#backlight {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#battery {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#battery.warning {
+    background: orange;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#battery.critical {
+    background: red;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#language {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 5px;
+}
+
+#temperature {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 0px;
+}
+
+#memory {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 5px 0px 5px;
+}
+#cpu {
+    background: black;
+    color: white;
+    padding: 0px 4px 0px 4px;
+    margin: 0px 0px 0px 0px;
+}
