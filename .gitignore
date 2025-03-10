@@ -1,3 +1,10 @@
 .config/emacs/
 !.config/emacs/init.el
 !.config/emacs/emacs.org
+
+.config/tmux/plugins
+.config/QtProject.conf
+.config/nvim/lazy-lock.json
+.config/lazygit
+.config/flameshot
+.config/cava/shaders
