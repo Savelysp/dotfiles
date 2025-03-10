@@ -1,0 +1,15 @@
+# general.import = ["~/.config/alacritty/themes/everforest_dark.toml"]
+# general.import = ["~/.config/alacritty/themes/hardhacker.toml"]
+# general.import = ["~/.config/alacritty/themes/dracula.toml"]
+general.import = ["~/.config/alacritty/themes/kanagawa_wave.toml"]
+
+[window]
+padding.x = 5
+padding.y = 5
+
+opacity = 0.9
+
+[font]
+normal.family = "JetBrains Mono Nerd Font"
+size = 10
+# size = 16

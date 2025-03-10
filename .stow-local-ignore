@@ -1,0 +1,5 @@
+.git
+nixos
+org_files
+suckless
+.*\.org$

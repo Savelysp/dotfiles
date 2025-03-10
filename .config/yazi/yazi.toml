@@ -1,0 +1,18 @@
+[opener]
+edit = [
+    { run = '$EDITOR "$@"', desc="$EDITOR", block = true, for = "unix" },
+]
+open = [
+    { run = 'zathura "$@"', desc = "Open", orphan = true },
+]
+
+[open]
+prepend_rules = [
+    { name = "*.pdf", use = "open" },
+]
+
+[preview]
+image = true
+
+[manager]
+sort_by = "natural"

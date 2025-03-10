@@ -1,0 +1,13 @@
+add_newline = false
+format ="""$directory$git_branch$python$character"""
+
+[git_branch]
+symbol = ' '
+# truncation_length = 4
+truncation_symbol = ''
+style = 'bold purple'
+format = '[$symbol$branch(:$remote_branch)]($style)'
+
+[python]
+symbol = ' '
+format = ' [(\(${symbol}$virtualenv\))]($style)'

@@ -1,0 +1,109 @@
+Config
+    { font = "JetBrainsMono Nerd Font 12"
+
+    , position     = TopH 25
+    , border       = FullB
+    , borderWidth  = 1
+
+    , borderColor  = "black"
+    , bgColor      = "black"
+    , fgColor      = "grey"
+
+    , lowerOnStart = True
+    , persistent   = False
+    , hideOnStart  = False
+
+    , commands =
+        [ Run StdinReader
+
+        , Run Kbd
+            [ ("us", "[US]")
+            , ("ru", "[RU]")
+            ]
+
+        , Run BatteryP ["BATT"]
+            [ "-t", "<acstatus> <left>%"
+
+            , "-L",       "20"
+            , "-H",       "80"
+            , "--low",    "red"
+            , "--normal", "#0A8EE5"
+            , "--high",   "green"
+
+            -- , "--lows",   ""
+            -- , "--mediums",""
+            -- , "--highs",  ""
+
+            , "--"
+            , "-O", "󰂄"
+            , "-o", "󱊢"
+            , "-i", "󱊣"
+            ] 50
+
+        , Run Cpu
+            [ "-t", "<fc=#9B9AF0> </fc><total>%"
+
+            , "-L",       "10"
+            , "-H",       "50"
+            , "--low",    "#0A8EE5"
+            , "--normal", "green"
+            , "--high",   "red"
+            ] 10
+
+        , Run Memory
+            [ "-t", "<fc=#D19A66> </fc><used> GiB"
+
+            , "-L",       "3"
+            , "-H",       "10"
+            , "--low",    "#0A8EE5"
+            , "--normal", "green"
+            , "--high",   "red"
+
+            , "-d", "1"
+            , "--", "--scale", "1024"
+            ] 10
+
+        , Run ThermalZone 0
+            [ "-t", "<fc=#9DE7EB>󰜗 </fc><temp>°C"
+
+            , "-L",       "20"
+            , "-H",       "60"
+            , "--low",    "#0A8EE5"
+            , "--normal", "green"
+            , "--high",   "red"
+            ] 30
+
+        , Run Brightness
+            [ "-t", "<fc=#89B4FA>󰃠 </fc><percent>%"
+
+            , "-L",       "50"
+            , "-H",       "50"
+            , "--low",    "grey"
+            , "--high",   "white"
+
+            , "--"
+            , "-D", "/sys/class/backlight/amdgpu_bl1/"
+            ] 10
+
+        , Run Volume "default" "Master"
+            [ "--template", "<fc=#CE5F61>󰕾 </fc><volume>%"
+
+            , "-L",       "50"
+            , "-H",       "50"
+            , "--low",    "grey"
+            , "--high",   "white"
+            ] 5
+
+        , Run Wireless "wlp1s0"
+            [ "-t", "<fc=#A6E3A1>  </fc><ssid>"
+            ] 10
+
+        , Run Date "%a %b%_d %Y %H:%M:%S" "date" 10
+
+        , Run Date "<fc=#ee9a00> %a %m:%d</fc> ┇ <fc=#ee9a00> %H:%M</fc>" "date" 10
+        ]
+
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "  %StdinReader% }{%kbd% ┇ %battery% ┇ %cpu% ┇ %memory% ┇ %thermal0% ┇ %bright% ┇ %default:Master% ┇ %wlp1s0wi% ┇ %date% "
+    }
