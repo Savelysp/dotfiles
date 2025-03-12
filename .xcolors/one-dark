@@ -1,0 +1,16 @@
+#define background       #1e222a
+#define background_dark  #353b45
+#define background_dim   #3e4451
+#define gray_dark        #545862
+#define gray             #565c64
+#define foreground       #abb2bf
+#define foreground_light #b6bdca
+#define white            #c8ccd4
+#define red              #e06c75
+#define orange           #d19a66
+#define yellow           #e5c07b
+#define green            #98c379
+#define cyan             #56b6c2
+#define blue             #61afef
+#define purple           #c678dd
+#define red_dark         #be5046

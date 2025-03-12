@@ -1,0 +1,36 @@
+!-- Настройки Xft --!
+Xft.antialias:  1
+Xft.hinting:    1
+Xft.autohint:   0
+Xft.hintstyle:  hintslight
+Xft.rgba:       rgb
+Xft.lcdfilter:  lcddefault
+! Xft.dpi:        100
+
+#include "/home/ifmund/.xcolors/nord"
+
+!-- Основные цвета --!
+! *foreground: black
+! *background: white
+
+!-- Цвета курсора --!
+! *cursorColor: white
+
+!-- Палитра --!
+! *color0:  black       ! Черный
+! *color1:  red         ! Красный
+! *color2:  green       ! Зеленый
+! *color3:  yellow      ! Желтый
+! *color4:  blue        ! Синий
+! *color5:  magenta     ! Фиолетовый
+! *color6:  cyan        ! Голубой
+! *color7:  white       ! Белый
+
+! *color8:  br-black    ! Темно-серый
+! *color9:  br-red      ! Ярко-красный
+! *color10: br-green    ! Ярко-зеленый
+! *color11: br-yellow   ! Ярко-желтый
+! *color12: br-blue     ! Ярко-синий
+! *color13: br-magenta  ! Ярко-фиолетовый
+! *color14: br-cyan     ! Ярко-голубой
+! *color15: br-white    ! Ярко-белый
