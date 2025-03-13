@@ -7,6 +7,7 @@ dunst &
 emacs --daemon &
 xsetroot -cursor_name left_ptr &
 
+# xsetroot -cursor_name left_ptr
 xrdb merge ~/.Xresources
 
 # Запуск polybar
@@ -20,7 +21,7 @@ bspc monitor -d 1 2 3 4 5 6 7 8 9
 # Рамки и отступы
 bspc config border_width 2
 bspc config window_gap   10
-bspc config top_padding  25
+bspc config top_padding  35
 
 # Цвета границ окон
 bspc config normal_border_color   "#23252e"
@@ -37,8 +38,8 @@ bspc config pointer_action3       resize_corner
 
 # Полноэкранный режим
 bspc config single_monocle      true
-bspc config borderless_monocle  true
-bspc config gapless_monocle     true
+bspc config borderless_monocle  false
+bspc config gapless_monocle     false
 bspc config paddingless_monocle true
 
 # Разбиение окон
