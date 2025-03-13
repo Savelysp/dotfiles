@@ -70,7 +70,7 @@
   (customize-set-value 'treesit-font-lock-level 4)
   (custom-set-faces
    '(font-lock-operator-face ((t (:foreground "#F86882")))))
-  
+
   ;; better scrolling experience
   (setq
    scroll-margin 20
@@ -625,71 +625,71 @@
   (projectile-mode 1))
 (use-package consult-projectile)
 
-(use-package lsp-mode
-  :init
-  (setq lsp-keymap-prefix "C-c l")
-  :hook (;; replace XXX-mode with concrete major-mode
-         (python-ts-mode . lsp-deferred)
-         (haskell-ts-mode . lsp-deferred)
-         (go-ts-mode . lsp-deferred)
-         ;; if you want which-key integration
-         (lsp-mode . lsp-enable-which-key-integration))
-  :config
-  (setq lsp-pyright-mypy-enabled t) ; Включить mypy через pyright
-  (setq lsp-pyright-use-library-code-for-types t) ; Использовать типы из библиотек
-  :commands lsp lsp-deferred)
+;; (use-package lsp-mode
+;;   :init
+;;   (setq lsp-keymap-prefix "C-c l")
+;;   :hook (;; replace XXX-mode with concrete major-mode
+;;          (python-ts-mode . lsp-deferred)
+;;          (haskell-ts-mode . lsp-deferred)
+;;          (go-ts-mode . lsp-deferred)
+;;          ;; if you want which-key integration
+;;          (lsp-mode . lsp-enable-which-key-integration))
+;;   :config
+;;   (setq lsp-pyright-mypy-enabled t) ; Включить mypy через pyright
+;;   (setq lsp-pyright-use-library-code-for-types t) ; Использовать типы из библиотек
+;;   :commands lsp lsp-deferred)
 
-(use-package lsp-ui :commands lsp-ui-mode)
+;; (use-package lsp-ui :commands lsp-ui-mode)
 ;; (use-package consult-lsp)
 
-(use-package flycheck
-  :init
-  (global-flycheck-mode)
-  :config
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (setq flycheck-python-ruff-executable "ruff")
-  (setq flycheck-python-mypy-executable "mypy")
-  (setq flycheck-python-pyright-executable "pyright"))
+;; (use-package flycheck
+;;   :init
+;;   (global-flycheck-mode)
+;;   :config
+;;   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;   (setq flycheck-python-ruff-executable "ruff")
+;;   (setq flycheck-python-mypy-executable "mypy")
+;;   (setq flycheck-python-pyright-executable "pyright"))
 
 (use-package vterm
   :commands vterm
   :config
   (setq vterm-max-scrollback 10000))
 
-(use-package python-mode
-  :hook (python-mode . python-ts-mode))
+;; (use-package python-mode
+;;   :hook (python-mode . python-ts-mode))
 
-(use-package pyvenv ;; or pyenv-mode
-  :hook (python-ts-mode . pyvenv-mode)
-  :config
-  (setq pyvenv-post-activate-hooks (list (lambda () (lsp-restart-workspace)))))
+;; (use-package pyvenv ;; or pyenv-mode
+;;   :hook (python-ts-mode . pyvenv-mode)
+;;   :config
+;;   (setq pyvenv-post-activate-hooks (list (lambda () (lsp-restart-workspace)))))
 
-(use-package flymake-ruff
-  :hook (python-ts-mode . flymake-ruff-load))
+;; (use-package flymake-ruff
+;;   :hook (python-ts-mode . flymake-ruff-load))
 
-(use-package flycheck-mypy
-  :after flycheck
-  :config
-  (add-to-list 'flycheck-checkers 'mypy))
+;; (use-package flycheck-mypy
+;;   :after flycheck
+;;   :config
+;;   (add-to-list 'flycheck-checkers 'mypy))
 
-(use-package lsp-pyright
-  :custom
-  (lsp-pyright-langserver-command "pyright") ;; or basedpyright
-  (lsp-pyright-disable-organize-imports t)
-  (lsp-pyright-type-checking-mode "off")
-  :hook (python-ts-mode . (lambda ()
-                          (require 'lsp-pyright)
-                          (lsp))))  ; or lsp-deferred
+;; (use-package lsp-pyright
+;;   :custom
+;;   (lsp-pyright-langserver-command "pyright") ;; or basedpyright
+;;   (lsp-pyright-disable-organize-imports t)
+;;   (lsp-pyright-type-checking-mode "off")
+;;   :hook (python-ts-mode . (lambda ()
+;;                           (require 'lsp-pyright)
+;;                           (lsp))))  ; or lsp-deferred
 
 ;; (use-package haskell-mode)
 ;; (use-package haskell-ts-mode)
 ;; (use-package lsp-haskell)
 
-(use-package go-mode
-  :hook (go-mode . go-ts-mode))
+;; (use-package go-mode
+;;   :hook (go-mode . go-ts-mode))
 
-(use-package go-eldoc
-  :hook (go-ts-mode . go-eldoc-setup))
+;; (use-package go-eldoc
+;;   :hook (go-ts-mode . go-eldoc-setup))
 
 (use-package auctex)
   ;; :config
@@ -701,7 +701,9 @@
 
 (use-package nix-mode)
 
-(use-package lua-mode)
+(use-package lua-mode
+  :custom
+  lua-indent-level 2)
 
 (use-package toml-mode)
 
