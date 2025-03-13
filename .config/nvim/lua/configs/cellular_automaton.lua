@@ -1,0 +1,1 @@
+-- require("cellular-automaton").setup({})
