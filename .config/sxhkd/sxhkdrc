@@ -37,7 +37,7 @@ super + shift + {f,p,t,e,x,y}
     pavucontrol, \
     telegram-desktop, \
     emacsclient -c -a 'emacs', \
-    sh $HOME/bin/xcolor-pick, \
+    sh $HOME/bin/xcolor-pick.sh, \
     alacritty -e yazi}
 
 # Управление звуком
