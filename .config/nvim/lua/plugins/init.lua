@@ -1,5 +1,7 @@
 return {
 --------------------------------------------------
+--Development-------------------------------------
+--------------------------------------------------
   { -- nvim-lspconfig, lsp_signature.nvim
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -32,8 +34,27 @@ return {
     end,
   },
 --------------------------------------------------
+  { -- LuaSnip
+    "L3MON4D3/LuaSnip",
+    dependencies = {
+      "rafamadriz/friendly-snippets",
+    },
+    config = function()
+      require("configs.luasnip")
+    end,
+  },
+--------------------------------------------------
+  { -- nvim-treesitter
+    "nvim-treesitter/nvim-treesitter",
+    config = function()
+      require("configs.treesitter")
+    end,
+  },
+--------------------------------------------------
   { -- nvim-dap
   },
+--------------------------------------------------
+--Navigation--------------------------------------
 --------------------------------------------------
   { -- nvim-tree.lua
     "nvim-tree/nvim-tree.lua",
@@ -46,29 +67,12 @@ return {
       require("configs.nvimtree")
     end,
   },
-  --------------------------------------------------
+--------------------------------------------------
   { -- which-key.nvim
     "folke/which-key.nvim",
     event = "VeryLazy",
     config = function()
       require("configs.whichkey")
-    end,
-  },
---------------------------------------------------
-  { -- gitsigns.nvim
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require("configs.gitsigns")
-    end,
-  },
---------------------------------------------------
-  { -- LuaSnip
-    "L3MON4D3/LuaSnip",
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-    },
-    config = function()
-      require("configs.luasnip")
     end,
   },
 --------------------------------------------------
@@ -82,12 +86,14 @@ return {
     end,
   },
 --------------------------------------------------
-  { -- nvim-treesitter
-    "nvim-treesitter/nvim-treesitter",
+  { -- gitsigns.nvim
+    "lewis6991/gitsigns.nvim",
     config = function()
-      require("configs.treesitter")
+      require("configs.gitsigns")
     end,
   },
+--------------------------------------------------
+--UI----------------------------------------------
 --------------------------------------------------
   { -- bufferline.nvim
     'akinsho/bufferline.nvim',
@@ -140,13 +146,6 @@ return {
   --   end,
   -- },
 --------------------------------------------------
-  { -- cellular-automaton.nvim
-    'Eandrju/cellular-automaton.nvim',
-    config = function()
-      require("configs.cellular_automaton")
-    end,
-  },
---------------------------------------------------
   { -- todo-comments.nvim
     'folke/todo-comments.nvim',
     dependencies = {
@@ -183,7 +182,22 @@ return {
 --------------------------------------------------
   { -- Mini (pairs, ai, icons, surround, move)
   },
-  --------------------------------------------------
+--------------------------------------------------
+--Fun---------------------------------------------
+--------------------------------------------------
+  { -- vim-be-good
+    "ThePrimeagen/vim-be-good",
+  },
+--------------------------------------------------
+  { -- cellular-automaton.nvim
+    'Eandrju/cellular-automaton.nvim',
+    config = function()
+      require("configs.cellular_automaton")
+    end,
+  },
+--------------------------------------------------
+--Colors------------------------------------------
+--------------------------------------------------
   { -- catppuccin
     'catppuccin/nvim',
     name = "catppuccin",
@@ -242,6 +256,8 @@ return {
   { -- doom-one
     'NTBBloodbath/doom-one.nvim',
   },
+--------------------------------------------------
+--------------------------------------------------
 --------------------------------------------------
   { -- (hop, project, harpoon, nvim-ufo, flash.nvim, leap, lspsaga, duck, typewriter, deal with it, cool retro term, snacks, oil, trouble, vim be good)
   },

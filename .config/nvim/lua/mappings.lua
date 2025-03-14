@@ -57,11 +57,11 @@ map(
   { desc = "telescope find all files" }
 )
 
-map("n", "<leader>ma", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
+map("n", "<leader>fm", "<cmd>Telescope marks<CR>", { desc = "telescope find marks" })
 map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "telescope git commits" })
 map("n", "<leader>gs", "<cmd>Telescope git_status<CR>", { desc = "telescope git status" })
 map("n", "<leader>gb", "<cmd>Telescope git_branches<CR>", { desc = "telescope git branches" })
-map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
+-- map("n", "<leader>pt", "<cmd>Telescope terms<CR>", { desc = "telescope pick hidden term" })
 
 -- map("n", "<leader>cs", "<cmd>Telescope colorscheme<CR>", { desc = "telescope themes" })
 vim.keymap.set("n", "<leader>cs", function()
@@ -75,6 +75,7 @@ map("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Следующий �
 map("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Предыдущий буфер" })
 
 -- Закрытие буферов
+map("n", "<leader>b", "<cmd>enew<CR>", { desc = "buffer new" })
 map("n", "<leader>bc", "<Cmd>BufferLinePickClose<CR>", { desc = "Закрыть выбранный буфер" })
 map("n", "<leader>bC", "<Cmd>BufferLineCloseLeft<CR><Cmd>BufferLineCloseRight<CR>", { desc = "Закрыть все буферы, кроме текущего" })
 
@@ -104,3 +105,10 @@ map("n", "<leader>wn", "<Cmd>tabnew<CR>", { desc = "Новая вкладка" }
 map("n", "<leader>wc", "<Cmd>tabclose<CR>", { desc = "Закрыть вкладку" })
 map("n", "<leader>wj", "<Cmd>tabnext<CR>", { desc = "Следующая вкладка" })
 map("n", "<leader>wk", "<Cmd>tabprev<CR>", { desc = "Предыдущая вкладка" })
+
+-- terminal
+map("t", "<C-x>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
+map('n', '<leader>sf', '<cmd>ToggleTerm direction=float<CR>', { desc = "" })
+map('n', '<leader>sh', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = "" })
+map('n', '<leader>sv', '<cmd>ToggleTerm direction=vertical<CR>', { desc = "" })
+map('n', '<leader>sc', '<cmd>ToggleTermCloseAll<CR>', { desc = "" })

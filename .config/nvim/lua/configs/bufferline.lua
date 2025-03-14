@@ -38,4 +38,9 @@ require("bufferline").setup({
     enforce_regular_tabs = false,
     always_show_bufferline = true,
   },
+  highlights = {
+    fill = {
+      bg = "None", -- Прозрачный фон для всей панели bufferline
+    },
+  },
 })
