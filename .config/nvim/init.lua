@@ -1,8 +1,3 @@
--- Leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
--- Поддержка true colors
-vim.opt.termguicolors = true
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -29,6 +24,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
+
+-- Leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- load plugins
 require("lazy").setup({
