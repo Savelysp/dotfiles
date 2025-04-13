@@ -2,7 +2,8 @@
 # general.import = ["~/.config/alacritty/themes/hardhacker.toml"]
 # general.import = ["~/.config/alacritty/themes/dracula.toml"]
 # general.import = ["~/.config/alacritty/themes/kanagawa_wave.toml"]
-general.import = ["~/.config/alacritty/themes/doom_one.toml"]
+# general.import = ["~/.config/alacritty/themes/doom_one.toml"]
+general.import = ["~/.config/alacritty/themes/radium.toml"]
 
 [window]
 padding.x = 5

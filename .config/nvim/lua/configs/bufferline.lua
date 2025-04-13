@@ -28,7 +28,7 @@ require("bufferline").setup({
         text_align = "left",
       },
     },
-    color_icons = true, -- использовать цветные иконки
+    color_icons = false, -- использовать цветные иконки
     show_buffer_icons = true, -- показывать иконки буферов
     show_buffer_close_icons = true, -- показывать иконки закрытия буферов
     show_close_icon = true, -- показывать иконку закрытия

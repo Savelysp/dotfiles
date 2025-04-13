@@ -1,2 +1,2 @@
-inherits = "monokai_pro"
+inherits = "everforest_dark"
 "ui.background" = { fg = "foreground" }

@@ -1,3 +1,5 @@
+-- Поддержка true colors
+vim.opt.termguicolors = true
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
